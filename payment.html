@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Boomraid</title>
+    <!-- Bootstrap core CSS -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+
+    <!-- material design-->
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/css/mdb.min.css" />
+
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#F57F20">
+    <link rel="icon" href="images/favicons/favicon.ico">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Custom styles from Anna -->
+    <link href="css/start.css" rel="stylesheet">
+
+</head>
+<body  id="innerPage">
+    
+        <header class="header header-box-shadow-on-scroll header-abs-top header-bg-transparent header-show-hide" id="header">
+            <div class="header-section" data-aos="menu-area" data-aos-anchor-placement="bottom-top">
+
+                <div class="container" id="logoAndNav">
+
+                    <nav class="navbar navbar-expand-lg" role="navigation">
+                        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar" aria-expanded="true" aria-label="Toggle navigation"><span class=""><i class="fa fa-bars fa-1x"></i></span></button>
+
+                        <a class="navbar-brand" href="index.html" style="padding:10px 0px 2px 0px;"><img border=0 src="../images/logo.svg" height="100%"></a>
+
+
+                        <div id="navBar" class="collapse navbar-collapse">
+
+                            <div class="navbar-nav ml-auto">
+
+                                <ul class="navbar-nav">
+
+                                    <li class="nav-item"><a href="#">Често задавани въпроси</a></li>
+                                    <li class="nav-item"><a href="#">Контакти</a></li>
+                                    <li class="nav-item dropdown">
+                                        <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+                                            Плащане
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-user">
+                                            <li>
+                                                <a href="#">София</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Пловдив</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Варна</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Бургас</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </nav>
+                </div>
+            </div>
+
+            
+
+
+           
+        </header>
+
+  
+    <main>
+        <div class="container">
+
+            <div class="row justify-content-center">
+                <div class="col-md-8 ">
+                   <div class="card p-4 mb-6"><h2 class="mt-2">Плащане</h2><div class="text d-flex justify-content-end" id="payment">
+    <table width="80%">
+        <tr>
+
+            <td>
+                BoomRaid™ Sofia:
+
+            </td>
+
+            <td>
+                20.00EUR
+
+            </td>
+        </tr>
+
+        <tr>
+
+            <td>
+
+                Отстъпка:
+            </td>
+
+            <td>
+
+                0.00EUR
+            </td>
+        </tr>
+        <tr><td><h4>ОБЩО:</h4></td><td><h4>20.00ЕUR</h4></td></tr>
+    </table>
+</div>
+                                         <div class="col-md-6 mt-4 payment justify-content-end ml-auto">
+
+                                       
+                                             <div id="paypal-button-container"></div>
+                                             <script src="https://www.paypal.com/sdk/js?client-id=ATAntwytQGNfTZGvR0BcVYOg7VxfEBW1u0UOaZX-q-AIMPRoxlGfQeUJOV6itd677oZC3UwCm_NpEF0v&currency=EUR&intent=authorize"></script>
+
+
+                                             <script>
+                                                 function getRandomBGMobilePhoneNumber() { return Math.round(Math.random() * (359899999999 - 359800000000) + 359800000000).toString(); }
+                                             </script>
+
+                                             <script>
+
+                                                 paypal.Buttons({
+                                                     style: {
+                                                         size: 'small',
+                                                         color: 'gold',
+                                                         shape: 'pill',
+                                                     },
+                                                     // Set up the transaction
+                                                     createOrder: function (data, actions) {
+
+                                                         return actions.order.create({
+                                                             purchase_units: [{
+                                                                 amount: {
+                                                                     value: '20',
+                                                                     currency_code: 'EUR'
+                                                                 }
+                                                             }],
+                                                             application_context: {
+                                                                 shipping_preference: 'NO_SHIPPING',
+                                                                 user_action: 'PAY_NOW'
+                                                             },
+                                                             payer: {
+                                                                 address: {
+                                                                     country_code: 'BG'
+                                                                 },
+                                                                 phone: {
+                                                                     phone_type: "MOBILE",
+                                                                     phone_number: {
+                                                                         national_number: getRandomBGMobilePhoneNumber()
+                                                                     }
+                                                                 }
+                                                             }
+                                                         });
+                                                     },
+
+                                                     onError: function (error) {
+
+                                                         showErrorScreen('<p> ' + error.toString() + ' </p><br>');
+                                                     },
+
+                                                     onApprove: function (data, actions) {
+
+                                                         showWaitScreen();
+
+                                                         return actions.order.authorize().then(function (authorization) {
+
+                                                             $("<p>Изпратена заявка...</p><br>").appendTo("#info-text");
+
+                                                             let authorizationId = authorization.purchase_units[0].payments.authorizations[0].id;
+
+                                                             $.ajax({
+                                                                 type: 'POST',
+                                                                 url: document.location.href + '/payment',
+                                                                 data: JSON.stringify({
+                                                                     cityId: "sofbg",
+                                                                     orderId: data.orderID,
+                                                                     authorizationId: authorizationId
+                                                                 }),
+                                                                 success: function (data) {
+
+                                                                     $("<p>Отговор получен</p><br>").appendTo("#info-text");
+
+                                                                     if (data.result.pin) {
+                                                                         $("<p>Пренасочване към старта на играта.</p><br>").appendTo("#info-text");
+                                                                         window.location.href = '/sofbg/start/' + data.result.pin;
+                                                                     } else {
+                                                                         showErrorScreen('<p>' + data.result.error + '</p><br>');
+                                                                     }
+                                                                 },
+                                                                 error: function (data) {
+                                                                     showErrorScreen('<p> ' + data.responseText + ' </p><br>');
+                                                                 },
+                                                                 contentType: "application/json",
+                                                                 dataType: 'json'
+                                                             });
+                                                         });
+                                                     }
+                                                 }).render('#paypal-button-container');
+                                             </script>
+                                         </div>
+                        
+                        </div>
+                </div>
+
+                <div class="col-md-4"><div class="card darkbg"><div class="text p-4">
+    Промоционална цена по случай старта на BoomRaid™!
+
+    Пълната игра включва 8 загадки, до 3 часа време за игра и неограничен брой участници.
+
+    Приемаме плащания с всички кредитни и дебитни карти както и с Paypal.
+
+    След успешно плащане ще те пренасочим към екрана за стартиране на играта. Можеш да стартираш когато пожелаеш или да подариш линка на приятел.
+
+    Линк за започване и разписка от плащането ще изпратим също на мейл адреса ти.
+</div></div></div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row d-flex justify-content-between">
+                <div class="col-md-4">
+                    <h4 class="pt-6">Кога ще излезе нещо ново...</h4><div class="textwidget custom-html-widget">
+                        <div class="hs-newsletter">
+                            <!--[if lte IE 8]>
+                            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+                            <![endif]-->
+                            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+                            <div class="hbspt-form">
+                                <form novalidate="" accept-charset="UTF-8" action="" method="POST" class="hs-form">
+                                    <div class="inputholder md-form">
+                                        <input type="email" class="form-control" id="youremail" value="" autocomplete="email">
+                                        <label for="youremail">Въведи имейл адрес</label>
+                                        <input type="submit" value="Изпрати" class="hs-button btn-primary">
+                                    </div>
+
+                            </div></form>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="footer-menus" class="col-md-8 pt-6 d-flex justify-content-end">
+                    <div class="col-md-4">
+
+                        <h4 class="widget-title">За BoomRaid<sup>TM</sup></h4>
+                        <ul>
+                            <li><a href="#">Често задавани въпроси</a></li>
+                            <li><a href="#">Правила на играта</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <h4 class="widget-title">За нас</h4>
+                        <ul>
+                            <li><a href="#">Кои сме ние</a></li>
+                            <li><a href="#">Контакти</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="footer-bottom  pt-3 pb-3">
+            <div class="container d-flex justify-content-between">
+                <div class="copyright">
+
+                    © 2020 Boomraid All rights reserved.
+
+                </div>
+                <div class="terms">
+                    <a href="#">Политика за лични данни</a> |
+                    <a href="#">Условия за ползване</a> |
+
+                </div>
+            </div>
+        </div>
+        </div>
+
+        </div>
+        <!-- .site-info -->
+    </footer>
+
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+
+   
+        $(document).ready(function () {
+
+            $('.btn-collapse').click(function () {
+                $(this).find('i').toggleClass('fas fa-plus fas fa-minus');
+            }); 
+
+
+        })
+</script>
+
+</body>
+</html>

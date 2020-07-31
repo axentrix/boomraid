@@ -69,6 +69,9 @@
   font-display: swap;
   src: local('Roboto Black'), local('Roboto-Black'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmYUtvAw.ttf) format('truetype');
 }
+button {
+  outline: none;
+}
 .btn {
   border-radius: 80px;
   padding: 8px 12px;
@@ -511,8 +514,8 @@ header {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  background: #0f1834 url('../images/hero.png');
+  background: #0f1834 url('../images/hero.png') 0 0 no-repeat;
+  background-size: cover;
   background-attachment: fixed;
   z-index: 777;
 }
@@ -555,6 +558,9 @@ header a {
   color: #ffffff;
   font-size: 14px;
   margin: 0 12px;
+}
+header a:hover {
+  color: #f7941e;
 }
 header:before {
   position: absolute;
@@ -958,6 +964,17 @@ footer .terms a:hover {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
+#testimonialcarousel {
+  z-index: 12;
+}
+#cityform2 {
+  position: relative;
+  z-index: 13;
+}
+#howtoplay .container {
+  position: relative;
+  z-index: 14;
+}
 #testimonialcarousel .carousel-item {
   min-height: 320px;
   flex-direction: column;
@@ -1069,4 +1086,175 @@ footer .terms a:hover {
 }
 .yellowtext {
   color: #fab61c;
+}
+.navbar-toggler {
+  color: #ffffff;
+}
+#linesvg {
+  overflow: visible;
+  width: auto;
+  height: auto;
+  max-width: 80%;
+  margin: 50vh 40px 100vh 40px;
+}
+@media (max-width: 600px) {
+  img {
+    display: none;
+  }
+  .navbar-brand {
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+    width: 300px;
+  }
+}
+@media (max-width: 1024px) {
+  section {
+    display: flex;
+    align-items: center;
+    height: auto;
+    min-height: 10vh;
+    background-size: contain;
+    background-attachment: fixed;
+  }
+  header {
+    background-position: 50% 0;
+  }
+}
+main {
+  position: relative;
+  overflow: visible;
+}
+#path-wrap {
+  position: absolute;
+  top: -50px;
+  bottom: -25rem;
+  left: 40%;
+  width: 362px;
+  height: 100%;
+  z-index: 11;
+  overflow: visible;
+}
+#path-wrap svg {
+  top: 0;
+  left: 0;
+  height: 95%;
+}
+#path-wrap svg g {
+  display: block;
+}
+#path-wrap svg #boomraid-route-shadow {
+  stroke: rgba(255, 255, 255, 0.3);
+  fill: none;
+  stroke-miterlimit: 10;
+}
+#path-wrap svg #boomraid-route {
+  top: 0px;
+}
+#path-wrap svg .polyline {
+  top: 0px;
+}
+#path-wrap svg .st0 {
+  stroke-width: 3;
+  height: 100vh;
+  stroke: #f7941e;
+}
+#innerPage {
+  background: #0f1834 url('../images/mainbg.jpg') 0 0 no-repeat;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#innerPage header {
+  background: none;
+  min-height: 50px;
+  height: auto;
+}
+#innerPage header:before {
+  display: none;
+}
+#innerPage main {
+  margin-top: 0;
+  background: none;
+}
+#innerPage footer {
+  width: 100%;
+  align-self: flex-end;
+}
+#innerPage main {
+  flex-grow: 1;
+}
+#innerPage header,
+#innerPage main,
+#innerPage footer {
+  flex-shrink: 0;
+}
+.card {
+  background-color: #ffffff;
+  min-height: 100px !important;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 0.875rem 0 rgba(0, 0, 0, 0.65);
+}
+.card h2 {
+  font-size: 24px;
+  color: #120e26;
+}
+.card.darkbg {
+  background: #2b2470;
+}
+.card.darkbg .text {
+  color: #ffffff;
+}
+.card .text {
+  color: #120e26;
+  font-size: 14px;
+  font-weight: 300;
+}
+#accordion .card {
+  min-height: 60px !important;
+  margin-bottom: 10px;
+}
+.card-header {
+  border: none;
+  background: none;
+  color: #120e26;
+}
+.card-header h5 {
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: none;
+}
+.card-body {
+  color: #120e26;
+}
+.btn-collapse {
+  color: #ff3107;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  outline: none !important;
+  box-shadow: none !important;
+  border: none;
+  background: none;
+}
+table h4 {
+  font-weight: bold;
+}
+#payment .payment {
+  display: flex;
+}
+#payment table tr:last-child {
+  border-bottom: solid 1px #cabfd8;
+}
+#payment table td {
+  padding: 10px;
+}
+.navbar {
+  padding: 0px;
+}
+.navbar-brand {
+  margin: 0px;
+  padding-left: 0px !Important;
 }
