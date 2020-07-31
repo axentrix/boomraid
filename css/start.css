@@ -793,6 +793,8 @@ section {
 }
 .suitableideas {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .suitableideas h5 {
   flex: 1 0 auto;
@@ -1097,15 +1099,31 @@ footer .terms a:hover {
   max-width: 80%;
   margin: 50vh 40px 100vh 40px;
 }
+.navbar .navbar-toggler {
+  margin-top: 20px;
+}
 @media (max-width: 600px) {
-  img {
-    display: none;
+  .header.aos-animate .navbar-brand {
+    position: absolute;
+    left: 50%;
+    margin-top: 20px !important;
+    margin-left: -60px !important;
+    width: 120px;
+  }
+  .header.aos-animate .navbar-brand img {
+    width: 120px;
+    max-width: 120px !important;
   }
   .navbar-brand {
     position: absolute;
     left: 50%;
-    margin-left: -150px;
-    width: 300px;
+    margin-top: 20px !important;
+    margin-left: -100px !important;
+    width: 200px;
+  }
+  .navbar-brand img {
+    width: 200px;
+    max-width: 200px !important;
   }
 }
 @media (max-width: 1024px) {
@@ -1144,7 +1162,7 @@ main {
   display: block;
 }
 #path-wrap svg #boomraid-route-shadow {
-  stroke: rgba(255, 255, 255, 0.3);
+  stroke: rgba(255, 255, 255, 0.1);
   fill: none;
   stroke-miterlimit: 10;
 }
