@@ -14,11 +14,11 @@ header {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    
     background: @bgcolor url('../images/hero.png') 0 0 no-repeat;
-    background-size:cover;
-    background-attachment: fixed;
-    z-index:777;
+    background-size: cover;
+    /*background-attachment: fixed;*/
+    z-index: 777;
+
     .header-section {
         margin-bottom: 30px;
         width: 100%;
@@ -33,7 +33,8 @@ header {
             width: 100%;
             position: fixed;
             background: @darkbg;
-            top:0px;
+            top: 0px;
+
             .navbar {
                 padding: 0;
             }
@@ -69,8 +70,19 @@ header {
         font-size: 14px;
         margin: 0 12px;
 
-        &:hover{
-            color:@secondarycolor;
+        &:hover {
+            color: @secondarycolor;
+        }
+
+        &.inactive {
+            color: @inactive !important;
+            cursor:pointer;
+
+            small {
+                display: block;
+                font-size: 12px;
+                color: lighten(@inactive, 12%);
+            }
         }
     }
 
@@ -158,6 +170,17 @@ h5 {
     font-size: 16px;
     font-weight: bold;
 
+    &.inactive {
+        border: solid 1px @checkinactive;
+        color: @checkinactive;
+        cursor: pointer;
+
+        &:hover {
+            color: @checkinactive;
+            border: solid 1px @checkinactive;
+        }
+    }
+
     &:hover {
         color: @thirdiarycolor;
         border: solid 1px @thirdiarycolor;
@@ -173,6 +196,17 @@ h5 {
     color: @thirdiarycolor;
     border: solid 1px @thirdiarycolor;
 }
+
+.custom-control-input:checked ~ .custom-control-label.inactive {
+    color: @checkinactive;
+    border: solid 1px @checkinactive;
+    cursor:pointer;
+    &::after{
+        display:none;
+    }
+}
+
+
 .custom-control-input:checked ~ .custom-control-label::before {
 }
 
@@ -370,16 +404,23 @@ section{
     min-height: 200px;
     position: absolute;
     bottom: 0px;
-    span{
-        color:@greybg;
+
+    &.aos-animate .circular-chart.pri-one .circle {
+        animation: progress 1.3s ease-out forwards;
     }
+
+    span {
+        color: @greybg;
+    }
+
     .single-chart {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-left:1em;
-        margin-right:1em;
+        margin-left: 1em;
+        margin-right: 1em;
+       
     }
 
     .circular-chart {
@@ -409,8 +450,10 @@ section{
         fill: none;
         stroke-width: 1.8;
         stroke-linecap: round;
-        animation: progress 1s ease-out forwards;
+        animation: none;
     }
+
+
 
     .circle {
         display: inline-block;
@@ -512,35 +555,38 @@ footer {
     border-radius: 80px;
     position: relative;
     height: 48px;
-    box-shadow: 0 0 0.875rem 0 rgba(53, 64, 82, 0.15);
+    box-shadow: 0 0 0.875rem 0 rgba(129, 122, 206, 0.45);
     padding: 5px 12px;
 
     input[type="email"] {
         outline: none;
         border: none;
         border-bottom: none !important;
-
+        max-width:250px;
         &:focus {
             border-bottom: none !important;
-            box-shadow:none !important;
-        }
-
-
-       
-    }
-}
-.md-form {
-
-
-    label {
-padding-left:12px;
-        &.active {
-            transform: translate(15px, -8px) scale(.8) !important;
+            box-shadow: none !important;
         }
     }
+
+    &.md-form {
+
+
+        label {
+            padding-left: 12px;
+
+            &.active {
+                transform: translate(15px, -8px) scale(.8) !important;
+            }
+        }
+    }
 }
 
+.waves-input-wrapper{
 
+    position:static;
+   display:inline;
+}
 /*Vertical Carousel*/
 .vert .carousel-item-next.carousel-item-left,
 .vert .carousel-item-prev.carousel-item-right {
@@ -639,17 +685,24 @@ padding-left:12px;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 
 
     .escaperoom {
         width: 30%;
-        display:flex;
-        justify-content:flex-end;
+        display: flex;
+        justify-content: flex-end;
+
+        h4 {
+            font-weight: bold;
+            font-size: 16px;
+            text-transform: none;
+        }
+
         .text {
             display: inline-flex;
-            width:auto;
-            justify-content:flex-end;
+            width: auto;
+            justify-content: flex-end;
             box-shadow: 0 0 0.875rem 0 rgba(53, 64, 82, 0.15);
             background: @white;
             border-radius: 10px 10px 2px 10px;
@@ -661,6 +714,12 @@ padding-left:12px;
     .boomraid {
         width: 30%;
 
+        h4 {
+            font-weight: bold;
+            font-size: 16px;
+            text-transform: none;
+            color: @secondarycolor;
+        }
 
         .text {
             display: inline-flex;
@@ -708,6 +767,227 @@ padding-left:12px;
 }
 
 @media (max-width: 600px) {
+    #example{
+        flex-direction:column;
+        justify-content:space-between;
+    }
+    .progress {
+        position: relative;
+        min-height: 690px;
+        flex-direction: column;
+
+        .single-chart{
+            flex:1 auto;
+        }
+    }
+    .row {
+        margin-right: 0px;
+       
+         margin-left: 0px;
+  }
+    section >h2{
+        text-align:center;
+    }
+    #howtoplaycarousel{
+
+        .carousel-item{
+            min-height:100px;
+            text-align:center;
+        }
+    }
+    .citycheck {
+        flex-wrap: wrap;
+        justify-content: center !important;
+
+        .custom-control {
+            margin: 10px;
+        }
+    }
+    .gameinfo-data {
+        justify-content: space-between !important;
+    }
+    .navbar-collapse {
+        width: 100%;
+        background: @blue;
+        position: fixed;
+        z-index: 7775;
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 0.4s;
+
+        ul.navbar-nav {
+            position: absolute;
+            top: 100px;
+            display: flex;
+            align-items: center;
+           
+            width: 100%;
+            height: 80vh;
+            .dropdown-menu{
+                width:90%;
+             left:5%;
+          right:5%;
+            }
+            li {
+                opacity: 0;
+                transition: opacity 0.4s cubic-bezier(0.58, 0.3, 0.005, 1);
+                padding: 0;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+
+                a {
+                    color: white;
+                    font-size: 24px;
+                    padding: 0;
+                    flex:1 0 auto;
+                    text-align:center;
+                }
+            }
+        }
+
+        &.show {
+            min-height: 100vh;
+            visibility: visible;
+            opacity: 1;
+            z-index: 7776;
+
+            ul {
+                li {
+                    opacity: 1;
+
+                    &:nth-child(1) {
+                        transition-delay: 0.2s;
+                    }
+
+                    &:nth-child(2) {
+                        transition-delay: 0.3s;
+                    }
+
+                    &:nth-child(3) {
+                        transition-delay: 0.4s;
+                    }
+
+                    &:nth-child(4) {
+                        transition-delay: 0.5s;
+                    }
+
+                    &:nth-child(5) {
+                        transition-delay: 0.6s;
+                    }
+
+                    &:nth-child(6) {
+                        transition-delay: 0.7s;
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-toggler {
+        padding: 0;
+        z-index:7777;
+        #nav-icon {
+            width: 40px;
+            height: 40px;
+            position: relative;
+            margin: 0 auto;
+            transform: rotate(0deg);
+            cursor: pointer;
+
+            span {
+                display: block;
+                position: absolute;
+                height: 3px;
+                width: 20px;
+                border-radius:10%;
+                background:@white;
+                opacity: 1;
+                transform: rotate(0deg);
+                transition: 0.25s ease-in-out;
+            }
+        }
+
+        &[aria-expanded="false"] {
+            #nav-icon {
+                span:nth-child(even) {
+                    left: 50%;
+                }
+
+                span:nth-child(odd) {
+                    left: 0px;
+                }
+
+                span:nth-child(1),
+                span:nth-child(2) {
+                    top: 0px;
+                }
+
+                span:nth-child(3),
+                span:nth-child(4) {
+                    top: 9px;
+                }
+
+                span:nth-child(5),
+                span:nth-child(6) {
+                    top: 18px;
+                }
+            }
+        }
+
+        &[aria-expanded="true"] {
+            #nav-icon {
+                span:nth-child(1),
+                span:nth-child(6) {
+                    transform: rotate(45deg);
+                }
+
+                span:nth-child(2),
+                span:nth-child(5) {
+                    transform: rotate(-45deg);
+                }
+
+                span:nth-child(1) {
+                    left: 5px;
+                    top: 7px;
+                }
+
+                span:nth-child(2) {
+                    left: calc(50% - 5px);
+                    top: 7px;
+                }
+
+                span:nth-child(3) {
+                    left: -50%;
+                    opacity: 0;
+                }
+
+                span:nth-child(4) {
+                    left: 100%;
+                    opacity: 0;
+                }
+
+                span:nth-child(5) {
+                    left: 5px;
+                    top: 12px;
+                }
+
+                span:nth-child(6) {
+                    left: calc(50% - 5px);
+                    top: 12px;
+                }
+            }
+        }
+    }
+
+   
     .header.aos-animate {
 
         .navbar-brand {
@@ -716,7 +996,7 @@ padding-left:12px;
             margin-top: 20px !important;
             margin-left: -60px !important;
             width: 120px;
-
+           
             img {
                 width: 120px;
                 max-width: 120px !important;
@@ -725,6 +1005,7 @@ padding-left:12px;
     }
 
     .navbar-brand {
+        z-index: 7779;
         position: absolute;
         left: 50%;
         margin-top: 20px !important;
@@ -929,4 +1210,45 @@ table{
 .navbar-brand{
     margin:0px;
     padding-left:0px !Important;
+}
+
+.btn-discount{
+
+    position:absolute;
+    top:1px; 
+    right:1px;
+    z-index:4444;
+}
+
+.discount {
+    input[type=text] {
+        border-bottom: none !important;
+        box-shadow: none !important;
+
+        &:focus {
+            border-bottom: none !important;
+            box-shadow: none !important;
+        }
+    }
+
+    .waves-effect{
+        position:static;
+    }
+    
+    
+    .waves-input-wrapper{
+        min-width:30%;
+        overflow:auto;
+        height:48px;
+    }
+}
+
+#thanks{
+    display:none;
+    
+
+    &.active{
+        transition:all 0.5s;
+        display:block;
+    }
 }

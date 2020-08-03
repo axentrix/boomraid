@@ -95,6 +95,14 @@ button {
   color: #ffffff;
   background: linear-gradient(45deg, #ff3107 0%, #f7941e 90%);
 }
+.btn-secondary {
+  display: block;
+  padding: 11px 14px;
+  margin: 0px;
+  border: none;
+  color: #ffffff;
+  background: #0f1834 !important;
+}
 .m-4 {
   margin: 1.5rem !important;
 }

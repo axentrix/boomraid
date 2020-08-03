@@ -41,12 +41,16 @@
                 <div class="container" id="logoAndNav">
 
                     <nav class="navbar navbar-expand-lg" role="navigation">
-                        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar" aria-expanded="true" aria-label="Toggle navigation"><span class=""><i class="fa fa-bars fa-1x"></i></span></button>
+                        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
+                            <div id="nav-icon">
+                                <span></span><span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                        </button>
 
                         <a class="navbar-brand" href="index.html" style="padding:10px 0px 2px 0px;"><img border=0 src="images/logo.svg" height="100%"></a>
 
 
-                        <div id="navBar" class="collapse navbar-collapse">
+                        <div id="navBar" class="navbar-collapse">
 
                             <div class="navbar-nav ml-auto">
 
@@ -63,13 +67,13 @@
                                                 <a href="#">София</a>
                                             </li>
                                             <li>
-                                                <a href="#">Пловдив</a>
+                                                <a href="#" class="inactive">Пловдив<small>Очаквай скоро</small></a>
                                             </li>
                                             <li>
-                                                <a href="#">Варна</a>
+                                                <a href="#" class="inactive">Варна<small>Очаквай скоро</small></a>
                                             </li>
                                             <li>
-                                                <a href="#">Бургас</a>
+                                                <a href="#" class="inactive">Бургас<small>Очаквай скоро</small></a>
                                             </li>
                                         </ul>
                                     </li>
@@ -86,15 +90,15 @@
                 <div class="container">
 
 
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-md-3 d-flex d-column align-items-center">
+                    <div class="row d-flex gameinfo-data justify-content-center">
+                        <div class="col-4 col-lg-2 d-flex d-column align-items-center">
                             <img src="images/city.svg" alt="Един град" title="Един град" /><h4>град</h4>
                         </div>
-                        <div class="col-md-3 d-flex d-column align-items-center">
+                        <div class="col-4 col-lg-2 d-flex d-column align-items-center">
                             <img src="images/hours.svg" alt="Три часа" title="Три часа" /><h4>часа</h4>
                         </div>
-                        <div class="col-md-3 d-flex d-column align-items-center">
-                            <img src="images/bombs.svg" alt="8 скрити адски машини" title="8 скрити адски машини" /><h4>скрити адски машини</h4>
+                        <div class="col-4 col-lg-2 d-flex d-column align-items-center">
+                            <img src="images/bombs.svg" alt="8 скрити адски машини" title="8 адски машини" /><h4>адски машини</h4>
                         </div>
                         <div class="col-md-8"><h2 class="pt-2 uppercase text-center">Можеш ли да ги спреш?</h2><p class="text-center">Неизвестен злосторник е скрил 8 адски машини в града. Единственият начин да ги спреш, е като решиш 8 загадки свързани с тях.</p></div>
                     </div>
@@ -112,16 +116,16 @@
                                         <label class="custom-control-label" for="Sofia">София</label>
                                     </div>
                                     <div class="custom-control custom-radio ">
-                                        <input type="radio" class="custom-control-input" id="Plovdiv" name="city" value="Plovdiv" required>
-                                        <label class="custom-control-label" for="Plovdiv">Пловдив</label>
+                                        <input type="radio" class="custom-control-input " id="Plovdiv" name="city" value="Plovdiv" required>
+                                        <label class="custom-control-label inactive" for="Plovdiv" data-toggle="tooltip" data-placement="top" title="Очаквай скоро">Пловдив</label>
                                     </div>
                                     <div class="custom-control custom-radio ">
                                         <input type="radio" class="custom-control-input" id="Varna" name="city" value="Varna" required>
-                                        <label class="custom-control-label" for="Varna">Варна</label>
+                                        <label class="custom-control-label  inactive" for="Varna" data-toggle="tooltip" data-placement="top" title="Очаквай скоро">Варна</label>
                                     </div>
                                     <div class="custom-control custom-radio ">
                                         <input type="radio" class="custom-control-input" id="Burgas" name="city" value="Burgas" required>
-                                        <label class="custom-control-label" for="Burgas">Бургас</label>
+                                        <label class="custom-control-label  inactive" for="Burgas" data-toggle="tooltip" data-placement="top" title="Очаквай скоро">Бургас</label>
 
 
                                     </div>
@@ -513,7 +517,12 @@
                     <div class="row w-100">
 
                         <div class="col-md-8 d-flex d-column justify-content-center">
+                            <div class="definitions">
+                                <div class="escaperoom"><h4>Ескейп стая</h4></div>
+                                <div class="th"></div>
+                                <div class="boomraid"><h4>BoomRaid<sup>TM</sup></h4></div>
 
+                            </div>
 
                             <div class="definitions" data-aos="fade-right" data-aos-anchor-placement="top-center">
                                 <div class="escaperoom"><div class="text">1-1.5ч.</div></div>
@@ -530,7 +539,7 @@
                             <div class="definitions" data-aos="fade-right" data-aos-anchor-placement="top-center">
                                 <div class="escaperoom"><div class="text">Физически, логически</div></div>
                                 <div class="th">загадки</div>
-                                <div class="boomraid"><div class="text">Логически</div></div>
+                                <div class="boomraid"><div class="text">Логически, наблюдателност</div></div>
                             </div>
 
                             <div class="definitions" data-aos="fade-left" data-aos-anchor-placement="top-center">
@@ -590,6 +599,12 @@
                                     <div class="carousel-item">
                                         <h4><span class="accent">3.</span>Събираш екип или група приятели</h4>
                                     </div>
+                                    <div class="carousel-item">
+                                        <h4><span class="accent">4.</span>Стартираш, когато пожелаеш!</h4>
+                                    </div>
+
+                                    
+
                                 </div>
 
                                 <div class="carouselcontrols col-md-4">
@@ -703,7 +718,7 @@
                             <path class="circle-bg" d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"></path>
-                            <path class="circle" stroke-dasharray="30, 100" d="M18 2.0845
+                            <path class="circle" stroke-dasharray="99, 100" d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"></path>
                             <text x="18" y="20.35" class="percentage"><tspan class="statistic">99</tspan>%</text>
@@ -716,7 +731,7 @@
                             <path class="circle-bg" d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"></path>
-                            <path class="circle" stroke-dasharray="30, 100" d="M18 2.0845
+                            <path class="circle" stroke-dasharray="98, 100" d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"></path>
                             <text x="18" y="20.35" class="percentage"><tspan class="statistic">98</tspan>%</text>
@@ -729,7 +744,7 @@
                             <path class="circle-bg" d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"></path>
-                            <path class="circle" stroke-dasharray="30, 100" d="M18 2.0845
+                            <path class="circle" stroke-dasharray="99, 100" d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"></path>
                             <text x="18" y="20.35" class="percentage"><tspan class="statistic">99.9</tspan>%</text>
@@ -779,39 +794,22 @@
                                                 </div>
                                                 <div class="custom-control custom-radio ">
                                                     <input type="radio" class="custom-control-input" id="Plovdiv2" name="city2" value="Plovdiv" required>
-                                                    <label class="custom-control-label" for="Plovdiv2">Пловдив</label>
+                                                    <label class="custom-control-label inactive" for="Plovdiv2" data-toggle="tooltip" data-placement="top" title="Очаквай скоро">Пловдив</label>
                                                 </div>
                                                 <div class="custom-control custom-radio ">
                                                     <input type="radio" class="custom-control-input" id="Varna2" name="city2" value="Varna" required>
-                                                    <label class="custom-control-label" for="Varna2">Варна</label>
+                                                    <label class="custom-control-label inactive" for="Varna2" data-toggle="tooltip" data-placement="top" title="Очаквай скоро">Варна</label>
                                                 </div>
                                                 <div class="custom-control custom-radio ">
                                                     <input type="radio" class="custom-control-input" id="Burgas2" name="city2" value="Burgas" required>
-                                                    <label class="custom-control-label" for="Burgas2">Бургас</label>
-                                                    <div class="invalid-feedback">Example invalid custom file feedback</div>
-
+                                                    <label class="custom-control-label inactive" for="Burgas2" data-toggle="tooltip" data-placement="top" title="Очаквай скоро">Варна</label>
                                                 </div>
-
                                             </div>
-
-
-
                                         </div>
-                                        <div class="col-md-4  d-flex justify-content-center"><button id="citysubmit" type="submit" class="btn w-100 btn-primary">започни сега</button></div>
-
-                                    </div>
-                                </form>
-
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-
+                                        <div class="col-md-4  d-flex justify-content-center"><button id="citysubmit" type="submit" class="btn w-100 btn-primary waves-effect waves-light">започни сега</button></div>
+                                        
+                                        </div></section>
+            </main>
     <footer class="site-footer">
         <div class="container">
             <div class="row d-flex justify-content-between">
@@ -849,8 +847,9 @@
 
                         <h4 class="widget-title">За нас</h4>
                         <ul>
-                            <li><a href="#">Кои сме ние</a></li>
-                            <li><a href="#">Контакти</a></li>
+                            <li><a href="about.html">Кои сме ние</a></li>
+                            <li><a href="contact.html">Контакти</a></li>
+                            <li><a href="https://www.facebook.com/BoomRaidBG"><i class="fab fa-facebook"></i></a></li>
                         </ul>
                     </div>
 
@@ -900,6 +899,12 @@
 
     <script>
         $(document).ready(function () {
+
+            $('label[data-toggle="tooltip"]').tooltip({
+                animated: 'fade',
+                placement: 'bottom',
+                trigger: 'click'
+            });
 
             // Find all Statistics on page, put them inside a variable
             var statistics = $(".statistic");
@@ -981,9 +986,9 @@
                         },
                         errorPlacement: function (error, element) {
                             if (element.is(":radio") || element.is(":checkbox")) {
-                                error.insertAfter(element.parent()).animate({ opacity: 0.25, left: '+=50' });
+                                error.insertAfter(element).animate({ opacity: 0.25, bottom: '+=50' });
                             } else {
-                                error.insertAfter(element).animate({ opacity: 0.25, left: '+=50' });
+                             //   error.insertAfter(element).animate({ opacity: 0.25, left: '+=50' });
                             }
                         },
                         submitHandler: function (form) {
