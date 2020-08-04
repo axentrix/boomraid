@@ -3,7 +3,7 @@
 
 
 // Enter your contact email address here
-$adminaddress = "anotovska@axentrix.com"; 
+$adminaddress = "info@treasurehunt.bg"; 
 
 // Enter the address of your website here include http://www. 
 $siteaddress ="boomraid.bg"; 
@@ -24,7 +24,7 @@ if ($REMOTE_ADDR == "") $ip = "no ip";
 else $ip = getHostByAddr($REMOTE_ADDR);
 
 $subject=$name." изпрати съобщение от ".$siteaddress;
-$body= nl2br("Имаш ново съобщение на ". $sitename."\r\n".
+$body= nl2br("Имаш ново съобщение от ". $sitename."\r\n".
 "Име:". $name."\r\n".
 "Е-mail:".$email."\r\n".
 "Съобщение:"."\r\n".

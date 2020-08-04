@@ -989,7 +989,7 @@ footer .terms a:hover {
   outline: none;
   border: none;
   border-bottom: none !important;
-  max-width: 250px;
+  max-width: 150px;
 }
 .inputholder input[type="email"]:focus {
   border-bottom: none !important;
@@ -1158,7 +1158,20 @@ footer .terms a:hover {
 .navbar .navbar-toggler {
   margin-top: 20px;
 }
-@media (max-width: 600px) {
+@media (max-width: 990px) {
+  .footer-bottom .container {
+    flex-direction: column;
+  }
+  .footer-bottom .container .copyright {
+    order: 2;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .footer-bottom .container .terms {
+    order: 1;
+    flex-direction: column;
+    color: #120e26;
+  }
   header {
     height: auto;
   }
@@ -1312,17 +1325,17 @@ footer .terms a:hover {
   }
   .navbar-toggler[aria-expanded="true"] #nav-icon span:nth-child(1) {
     transform: rotate(45deg);
+    top: 6px;
   }
   .navbar-toggler[aria-expanded="true"] #nav-icon span:nth-child(3) {
     transform: rotate(-45deg);
-    left: calc(45%);
   }
   .navbar-toggler[aria-expanded="true"] #nav-icon span:nth-child(3) {
-    left: 5px;
-    top: 7px;
+    left: 0px;
+    top: 6px;
   }
   .navbar-toggler[aria-expanded="true"] #nav-icon span:nth-child(2) {
-    left: -50%;
+    width: 0px;
     opacity: 0;
   }
   .header.aos-animate .navbar-brand {
