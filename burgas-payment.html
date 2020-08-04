@@ -33,7 +33,7 @@
     <link href="css/start.css" rel="stylesheet">
 
 </head>
-<body  id="innerPage">
+<body  id="innerPageSoon">
     
         <header class="header header-box-shadow-on-scroll header-abs-top header-bg-transparent header-show-hide" id="header">
             <div class="header-section" data-aos="menu-area" data-aos-anchor-placement="bottom-top">
@@ -96,21 +96,24 @@
     <main>
         <div class="container">
 
-            <div class="row justify-content-center">
+            <div class="row justify-content-center align-items-center">
                 <div class="col-md-8 ">
-                    <div class="card p-4 mb-6">
-                        <h2 class="mt-2">За нас</h2>
-
-
-                        <div class="text" id="about">Ние сме специалисти в градските игри със загадки с над 13 годишен опит. Всичко започна 2004 година когато участвахме в Лов на Съкровища в Сан Франциско. След това пренесохме опита си в България и дълго време предлагахме приключенията само за фирми и организации. Време е за следващата стъпка - да направим вълнуващите градски преживявания достъпни за всички.</div>
-                    </div>
+                   <div class="card darkbg p-4 mb-6"><h2 class="mt-2 whitetitle">Очаквай скоро!</h2>
+                    
+                    
+                                              <div class="text d-flex justify-content-end d-column" id="payment">
+                                                 
+                                              </div>
+                     
+</div>
                                          
                         
                         </div>
                 </div>
 
+                
             </div>
-      
+        </div>
 
     </main>
 
@@ -121,7 +124,7 @@
                 <div class="col-md-4">
                     <h4 class="pt-6">Кога ще излезе нещо ново...</h4><div class="textwidget custom-html-widget">
                         <div class="hs-newsletter">
-                        
+                         
                            
                             <div class="hbspt-form">
                                 <form novalidate="" accept-charset="UTF-8" action="" method="POST" class="hs-form">
@@ -181,8 +184,7 @@
 
         </div>
         <!-- .site-info -->
-    </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </footer><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
@@ -196,25 +198,10 @@
    
         $(document).ready(function () {
 
-            $("#boomraid-contact").submit(function (event) {
-                // Stop the browser from submitting the form.    
-                event.preventDefault();
+            $('.btn-collapse').click(function () {
+                $(this).find('i').toggleClass('fas fa-plus fas fa-minus');
+            }); 
 
-                var formData = $("#boomraid-contact").serialize();
-                $.ajax({
-                    type: 'POST',
-                    url: $("#boomraid-contact").attr('action'),
-                    data: formData
-                }).done(function (response) {
-                    $('#thanks').show();
-                    $("#boomraid-contact").hide();
-
-                    // Clear the form.
-                    $('#fullname').val('');
-                    $('#_replyto').val('');
-                    $('#message').val('');
-                });
-            })
 
         })
 </script>

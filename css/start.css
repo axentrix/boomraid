@@ -1418,6 +1418,7 @@ main {
 }
 #innerPage {
   background: #0f1834 url('../images/mainbg.jpg') 0 0 no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -1445,6 +1446,38 @@ main {
 #innerPage header,
 #innerPage main,
 #innerPage footer {
+  flex-shrink: 0;
+}
+#innerPageSoon {
+  background: #0f1834 url('../images/comingsoon1.jpg') 50% 50% no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#innerPageSoon header {
+  background: none;
+  min-height: 50px;
+  height: auto;
+}
+#innerPageSoon header:before {
+  display: none;
+}
+#innerPageSoon main {
+  margin-top: 0;
+  background: none;
+}
+#innerPageSoon footer {
+  width: 100%;
+  align-self: flex-end;
+}
+#innerPageSoon main {
+  flex-grow: 1;
+}
+#innerPageSoon header,
+#innerPageSoon main,
+#innerPageSoon footer {
   flex-shrink: 0;
 }
 .card {
@@ -1543,4 +1576,8 @@ table h4 {
 #thanks.active {
   transition: all 0.5s;
   display: block;
+}
+.whitetitle {
+  color: #ffffff !important;
+  text-align: center;
 }

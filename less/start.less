@@ -1104,10 +1104,11 @@ main{
 
 #innerPage {
     background: @bgcolor url('../images/mainbg.jpg') 0 0 no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-   min-height: 100vh;
+    min-height: 100vh;
 
     header {
         background: none;
@@ -1125,7 +1126,6 @@ main{
     }
 
     footer {
-        
         width: 100%;
         align-self: flex-end;
     }
@@ -1138,7 +1138,42 @@ main{
         flex-shrink: 0;
     }
 }
+#innerPageSoon {
+    background: @bgcolor url('../images/comingsoon1.jpg') 50% 50% no-repeat;
+    background-size:cover;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 100vh;
 
+    header {
+        background: none;
+        min-height: 50px;
+        height: auto;
+
+        &:before {
+            display: none;
+        }
+    }
+
+    main {
+        margin-top: 0;
+        background: none;
+    }
+
+    footer {
+        width: 100%;
+        align-self: flex-end;
+    }
+
+    main {
+        flex-grow: 1;
+    }
+
+    header, main, footer {
+        flex-shrink: 0;
+    }
+}
 .card {
     background-color: @white;
     min-height: 100px !important;
@@ -1268,4 +1303,9 @@ table{
         transition:all 0.5s;
         display:block;
     }
+}
+
+.whitetitle{
+    color:@white !important;
+    text-align:center;
 }
