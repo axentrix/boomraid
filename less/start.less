@@ -105,9 +105,16 @@ header {
             margin-top: 10px;
             text-align: center;
         }
+
+       
     }
 }
+.gameinfo-data {
 
+    img {
+        max-width: 90px;
+    }
+}
 main {
     background: @bgcolor url('../images/bgmap.svg') 50% 0 repeat-y;
     background-size:100%;
@@ -767,6 +774,22 @@ footer {
 }
 
 @media (max-width: 600px) {
+
+    header{
+        height:auto;
+    }
+    .custom-control{
+        padding-left:0;
+        flex:1 0 100%;
+    }
+    .definitions .text {
+        font-size: calc(1.03125rem);
+    }
+    .text, p, .progress {
+        font-size: calc(1.33125rem);
+        text-align:center;
+    
+    }
     #example{
         flex-direction:column;
         justify-content:space-between;
@@ -893,12 +916,13 @@ footer {
 
     .navbar-toggler {
         padding: 0;
-        z-index:7777;
+        z-index: 7777;
+
         #nav-icon {
-            width: 40px;
+            width: 30px;
             height: 40px;
             position: relative;
-            margin: 0 auto;
+            margin: 10px auto;
             transform: rotate(0deg);
             cursor: pointer;
 
@@ -907,8 +931,8 @@ footer {
                 position: absolute;
                 height: 3px;
                 width: 20px;
-                border-radius:10%;
-                background:@white;
+                border-radius: 10%;
+                background: @white;
                 opacity: 1;
                 transform: rotate(0deg);
                 transition: 0.25s ease-in-out;
@@ -917,26 +941,17 @@ footer {
 
         &[aria-expanded="false"] {
             #nav-icon {
-                span:nth-child(even) {
-                    left: 50%;
-                }
 
-                span:nth-child(odd) {
-                    left: 0px;
-                }
 
-                span:nth-child(1),
-                span:nth-child(2) {
+                span:nth-child(1) {
                     top: 0px;
                 }
 
-                span:nth-child(3),
-                span:nth-child(4) {
+                span:nth-child(2) {
                     top: 9px;
                 }
 
-                span:nth-child(5),
-                span:nth-child(6) {
+                span:nth-child(3) {
                     top: 18px;
                 }
             }
@@ -944,44 +959,25 @@ footer {
 
         &[aria-expanded="true"] {
             #nav-icon {
-                span:nth-child(1),
-                span:nth-child(6) {
+                span:nth-child(1) {
                     transform: rotate(45deg);
                 }
 
-                span:nth-child(2),
-                span:nth-child(5) {
+                span:nth-child(3) {
                     transform: rotate(-45deg);
-                }
-
-                span:nth-child(1) {
-                    left: 5px;
-                    top: 7px;
-                }
-
-                span:nth-child(2) {
                     left: calc(50% - 5px);
-                    top: 7px;
                 }
 
                 span:nth-child(3) {
+                    left: 5px;
+                    top: 7px;
+                }
+
+              
+
+                span:nth-child(2) {
                     left: -50%;
                     opacity: 0;
-                }
-
-                span:nth-child(4) {
-                    left: 100%;
-                    opacity: 0;
-                }
-
-                span:nth-child(5) {
-                    left: 5px;
-                    top: 12px;
-                }
-
-                span:nth-child(6) {
-                    left: calc(50% - 5px);
-                    top: 12px;
                 }
             }
         }

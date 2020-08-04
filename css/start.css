@@ -597,6 +597,9 @@ header .gameinfo h4 {
   margin-top: 10px;
   text-align: center;
 }
+.gameinfo-data img {
+  max-width: 90px;
+}
 main {
   background: #0f1834 url('../images/bgmap.svg') 50% 0 repeat-y;
   background-size: 100%;
@@ -1156,6 +1159,22 @@ footer .terms a:hover {
   margin-top: 20px;
 }
 @media (max-width: 600px) {
+  header {
+    height: auto;
+  }
+  .custom-control {
+    padding-left: 0;
+    flex: 1 0 100%;
+  }
+  .definitions .text {
+    font-size: calc(1.03125rem);
+  }
+  .text,
+  p,
+  .progress {
+    font-size: calc(1.33125rem);
+    text-align: center;
+  }
   #example {
     flex-direction: column;
     justify-content: space-between;
@@ -1264,10 +1283,10 @@ footer .terms a:hover {
     z-index: 7777;
   }
   .navbar-toggler #nav-icon {
-    width: 40px;
+    width: 30px;
     height: 40px;
     position: relative;
-    margin: 0 auto;
+    margin: 10px auto;
     transform: rotate(0deg);
     cursor: pointer;
   }
@@ -1282,55 +1301,29 @@ footer .terms a:hover {
     transform: rotate(0deg);
     transition: 0.25s ease-in-out;
   }
-  .navbar-toggler[aria-expanded="false"] #nav-icon span:nth-child(even) {
-    left: 50%;
-  }
-  .navbar-toggler[aria-expanded="false"] #nav-icon span:nth-child(odd) {
-    left: 0px;
-  }
-  .navbar-toggler[aria-expanded="false"] #nav-icon span:nth-child(1),
-  .navbar-toggler[aria-expanded="false"] #nav-icon span:nth-child(2) {
+  .navbar-toggler[aria-expanded="false"] #nav-icon span:nth-child(1) {
     top: 0px;
   }
-  .navbar-toggler[aria-expanded="false"] #nav-icon span:nth-child(3),
-  .navbar-toggler[aria-expanded="false"] #nav-icon span:nth-child(4) {
+  .navbar-toggler[aria-expanded="false"] #nav-icon span:nth-child(2) {
     top: 9px;
   }
-  .navbar-toggler[aria-expanded="false"] #nav-icon span:nth-child(5),
-  .navbar-toggler[aria-expanded="false"] #nav-icon span:nth-child(6) {
+  .navbar-toggler[aria-expanded="false"] #nav-icon span:nth-child(3) {
     top: 18px;
   }
-  .navbar-toggler[aria-expanded="true"] #nav-icon span:nth-child(1),
-  .navbar-toggler[aria-expanded="true"] #nav-icon span:nth-child(6) {
+  .navbar-toggler[aria-expanded="true"] #nav-icon span:nth-child(1) {
     transform: rotate(45deg);
   }
-  .navbar-toggler[aria-expanded="true"] #nav-icon span:nth-child(2),
-  .navbar-toggler[aria-expanded="true"] #nav-icon span:nth-child(5) {
+  .navbar-toggler[aria-expanded="true"] #nav-icon span:nth-child(3) {
     transform: rotate(-45deg);
+    left: calc(45%);
   }
-  .navbar-toggler[aria-expanded="true"] #nav-icon span:nth-child(1) {
+  .navbar-toggler[aria-expanded="true"] #nav-icon span:nth-child(3) {
     left: 5px;
     top: 7px;
   }
   .navbar-toggler[aria-expanded="true"] #nav-icon span:nth-child(2) {
-    left: calc(45%);
-    top: 7px;
-  }
-  .navbar-toggler[aria-expanded="true"] #nav-icon span:nth-child(3) {
     left: -50%;
     opacity: 0;
-  }
-  .navbar-toggler[aria-expanded="true"] #nav-icon span:nth-child(4) {
-    left: 100%;
-    opacity: 0;
-  }
-  .navbar-toggler[aria-expanded="true"] #nav-icon span:nth-child(5) {
-    left: 5px;
-    top: 12px;
-  }
-  .navbar-toggler[aria-expanded="true"] #nav-icon span:nth-child(6) {
-    left: calc(45%);
-    top: 12px;
   }
   .header.aos-animate .navbar-brand {
     position: absolute;
