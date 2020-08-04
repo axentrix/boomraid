@@ -14,7 +14,7 @@ header {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: @bgcolor url('../images/hero.png') 0 0 no-repeat;
+    background: @bgcolor url('../images/hero.jpg') 0 0 no-repeat;
     background-size: cover;
     /*background-attachment: fixed;*/
     z-index: 777;
@@ -312,10 +312,10 @@ section{
 }
 
 #howtoplay {
-    background: url("../images/bluemap.png") 0 0 no-repeat;
+    background: url("../images/bluemap.jpg") 0 0 no-repeat;
 }
 #example {
-    background: url("../images/slaveykovi.png") 0 0 no-repeat;
+    background: url("../images/slaveykovi.jpg") 0 0 no-repeat;
     min-height:80vh;
     &:before{
         position:absolute;
@@ -329,7 +329,7 @@ section{
 }
 
 #adventure {
-    background: url("../images/coinbg.png") 0 0 no-repeat;
+    background: url("../images/coinbg.jpg") 0 0 no-repeat;
 }
 .accent{
     color:@maincolor;
@@ -485,17 +485,24 @@ section{
 
 footer {
     background: @darkbg;
-    #footer-menus{
 
-        ul{
-            list-style:none;
-            margin:0;
-            padding:0;
+    #footer-menus {
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
-        a{
-            color:@white;
+
+        a {
+            color: @white;
+
+            &:hover {
+                color: @checkinactive;
+            }
         }
     }
+
     h4 {
         text-transform: none;
         color: @thirdiarycolor;
@@ -511,8 +518,8 @@ footer {
 
     .terms {
         color: @greybg;
-        font-size:12px;
-        align-items:center;
+        font-size: 12px;
+        align-items: center;
 
         a {
             padding-left: 10px;
@@ -520,8 +527,8 @@ footer {
             font-size: 14px;
             color: @greybg;
 
-            &:hover{
-                color:@thirdiarycolor;
+            &:hover {
+                color: @thirdiarycolor;
             }
         }
 

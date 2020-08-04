@@ -522,7 +522,7 @@ header {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #0f1834 url('../images/hero.png') 0 0 no-repeat;
+  background: #0f1834 url('../images/hero.jpg') 0 0 no-repeat;
   background-size: cover;
   /*background-attachment: fixed;*/
   z-index: 777;
@@ -768,10 +768,10 @@ section {
   background: linear-gradient(rgba(43, 36, 112, 0.5) 0%, rgba(93, 28, 143, 0.5) 50%);
 }
 #howtoplay {
-  background: url("../images/bluemap.png") 0 0 no-repeat;
+  background: url("../images/bluemap.jpg") 0 0 no-repeat;
 }
 #example {
-  background: url("../images/slaveykovi.png") 0 0 no-repeat;
+  background: url("../images/slaveykovi.jpg") 0 0 no-repeat;
   min-height: 80vh;
 }
 #example:before {
@@ -784,7 +784,7 @@ section {
   height: 100%;
 }
 #adventure {
-  background: url("../images/coinbg.png") 0 0 no-repeat;
+  background: url("../images/coinbg.jpg") 0 0 no-repeat;
 }
 .accent {
   color: #ff3107;
@@ -925,6 +925,9 @@ footer #footer-menus ul {
 }
 footer #footer-menus a {
   color: #ffffff;
+}
+footer #footer-menus a:hover {
+  color: #9b9ab1;
 }
 footer h4 {
   text-transform: none;

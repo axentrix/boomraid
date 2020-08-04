@@ -816,9 +816,7 @@
                 <div class="col-md-4">
                     <h4 class="pt-6">Кога ще излезе нещо ново...</h4><div class="textwidget custom-html-widget">
                         <div class="hs-newsletter">
-                            <!--[if lte IE 8]>
-                            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-                            <![endif]-->
+                            
                             <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
                             <div class="hbspt-form">
                                 <form novalidate="" accept-charset="UTF-8" action="" method="POST" class="hs-form">
@@ -885,7 +883,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
 
     <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
 
@@ -906,6 +904,39 @@
                 trigger: 'click'
             });
 
+
+            $('label[data-toggle="tooltip"]').on('click', function (evt) {
+
+                var elem,
+                    delay;
+
+                delay = 1000; // 5 seconds
+
+                evt.preventDefault();
+                evt.stopImmediatePropagation();
+
+                elem = evt.currentTarget;
+
+                if ($(elem).data('popoverisvisible') == 1) {
+                    $(elem).tooltip('hide');
+                    $(elem).data('popoverisvisible', 0);
+                }
+                else {
+                    $(elem).tooltip('show');
+                    $(elem).data('popoverisvisible', 1);
+                    setTimeout(function () {
+                        if ($(elem).data('popoverisvisible') == 1) {
+                            $(elem).tooltip('hide');
+                            $(elem).data('popoverisvisible', 0);
+                        }
+                    }, delay);
+                }
+            });
+
+
+
+
+           
             // Find all Statistics on page, put them inside a variable
             var statistics = $(".statistic");
 
