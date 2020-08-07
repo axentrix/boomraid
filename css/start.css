@@ -1061,6 +1061,7 @@ footer .terms a:hover {
   width: 100%;
   border-radius: 4px;
   box-shadow: 0 0 0.875rem 0 rgba(53, 64, 82, 0.15);
+  margin-bottom: 20px;
 }
 .herobox .text {
   color: #120e26;
@@ -1096,7 +1097,7 @@ footer .terms a:hover {
   margin-bottom: 10px;
 }
 .definitions .escaperoom {
-  width: 30%;
+  width: 35%;
   display: flex;
   justify-content: flex-end;
 }
@@ -1116,7 +1117,7 @@ footer .terms a:hover {
   color: #120e26;
 }
 .definitions .boomraid {
-  width: 30%;
+  width: 35%;
 }
 .definitions .boomraid h4 {
   font-weight: bold;
@@ -1136,7 +1137,7 @@ footer .terms a:hover {
   text-transform: uppercase;
   color: #fab61c;
   font-size: 14px;
-  width: 40%;
+  width: 30%;
   text-align: center;
 }
 .orangetext {
