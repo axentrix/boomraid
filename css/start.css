@@ -632,6 +632,8 @@ h5 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 20;
 }
 .cities h3 {
   flex: 0 0 100%;
@@ -1162,6 +1164,58 @@ footer .terms a:hover {
 .navbar .navbar-toggler {
   margin-top: 20px;
 }
+@media (max-width: 1024px) {
+  section {
+    display: flex;
+    align-items: center;
+    height: auto;
+    min-height: 10vh;
+    background-size: contain;
+    background-attachment: fixed;
+  }
+  header {
+    background-position: 50% 0;
+  }
+}
+main {
+  position: relative;
+  overflow: visible;
+}
+#path-wrap {
+  position: absolute;
+  top: -50px;
+  bottom: -25rem;
+  left: 40%;
+  width: 362px;
+  height: 100%;
+  z-index: 11;
+  overflow: visible;
+}
+#path-wrap svg {
+  top: 0;
+  left: 0;
+  height: 95%;
+}
+#path-wrap svg g {
+  display: block;
+}
+#path-wrap svg #boomraid-route-shadow {
+  stroke: rgba(255, 255, 255, 0.1);
+  fill: none;
+  stroke-miterlimit: 10;
+}
+#path-wrap svg #boomraid-route {
+  top: 0px;
+}
+#path-wrap svg .polyline {
+  top: 0px;
+}
+#path-wrap svg .st0 {
+  stroke-width: 3;
+  height: 100vh;
+  stroke: #f7941e;
+}
+/*End of media query 1*/
 @media (max-width: 990px) {
   .footer-bottom .container {
     flex-direction: column;
@@ -1365,57 +1419,6 @@ footer .terms a:hover {
     width: 200px;
     max-width: 200px !important;
   }
-}
-@media (max-width: 1024px) {
-  section {
-    display: flex;
-    align-items: center;
-    height: auto;
-    min-height: 10vh;
-    background-size: contain;
-    background-attachment: fixed;
-  }
-  header {
-    background-position: 50% 0;
-  }
-}
-main {
-  position: relative;
-  overflow: visible;
-}
-#path-wrap {
-  position: absolute;
-  top: -50px;
-  bottom: -25rem;
-  left: 40%;
-  width: 362px;
-  height: 100%;
-  z-index: 11;
-  overflow: visible;
-}
-#path-wrap svg {
-  top: 0;
-  left: 0;
-  height: 95%;
-}
-#path-wrap svg g {
-  display: block;
-}
-#path-wrap svg #boomraid-route-shadow {
-  stroke: rgba(255, 255, 255, 0.1);
-  fill: none;
-  stroke-miterlimit: 10;
-}
-#path-wrap svg #boomraid-route {
-  top: 0px;
-}
-#path-wrap svg .polyline {
-  top: 0px;
-}
-#path-wrap svg .st0 {
-  stroke-width: 3;
-  height: 100vh;
-  stroke: #f7941e;
 }
 #innerPage {
   background: #0f1834 url('../images/mainbg.jpg') 0 0 no-repeat;

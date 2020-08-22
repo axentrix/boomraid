@@ -1032,6 +1032,9 @@
 
         })(jQuery, window, document);
         AOS.init();
+
+
+       
         var path = document.querySelector('#boomraid-route');
 
        
@@ -1062,10 +1065,18 @@
                     path.style.strokeDasharray = pathLength + ' ' + pathLength;
                 }
 
+            if (scrollPercentage >= 0.45) {
+                path.style.strokeDashoffset = pathLength - (drawLength + document.body.scrollTop + 300);
 
+            }
+
+            else {
+                path.style.strokeDashoffset = pathLength - (drawLength + document.body.scrollTop - 300);
+
+            }
                 //debug
                
-            console.log('pathLength ' + pathLength)
+            console.log('window height: ' + $(window).height())
 
             console.log('percentage ' + document.documentElement.clientHeight)
                     console.log('drawLength ' + drawLength)
