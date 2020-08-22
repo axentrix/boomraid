@@ -1,0 +1,1099 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>Boomraid-градска приключенска игра, която предизвиква участниците да решават загадки</title>
+    <!-- Bootstrap core CSS -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+
+    <!-- material design-->
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/css/mdb.min.css" />
+
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#F57F20">
+    <link rel="icon" href="images/favicons/favicon.ico">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Custom styles from Anna -->
+    <link href="css/start.css" rel="stylesheet">
+
+</head>
+<body>
+   
+        <header class="header header-box-shadow-on-scroll header-abs-top header-bg-transparent header-show-hide" id="header">
+            <div class="header-section" data-aos="menu-area" data-aos-anchor-placement="bottom-top">
+
+                <div class="container" id="logoAndNav">
+
+                    <nav class="navbar navbar-expand-lg" role="navigation">
+                        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
+                            <div id="nav-icon">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </button>
+
+                        <a class="navbar-brand" href="index.html" style="padding:10px 0px 2px 0px;"><img border=0 src="images/logo.svg" height="100%"></a>
+
+
+                        <div id="navBar" class="navbar-collapse">
+
+                            <div class="navbar-nav ml-auto">
+
+                                <ul class="navbar-nav">
+
+                                    <li class="nav-item"><a href="faq.html">Често задавани въпроси</a></li>
+                                    <li class="nav-item"><a href="contact.html">Контакти</a></li>
+                                    <li class="nav-item dropdown">
+                                        <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+                                            Плащане
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-user">
+                                            <li>
+                                                <a href="sofia-payment.html">София</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="inactive">Пловдив<small>Очаквай скоро</small></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="inactive">Варна<small>Очаквай скоро</small></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="inactive">Бургас<small>Очаквай скоро</small></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </nav>
+                </div>
+            </div>
+
+            <div class="gameinfo" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <div class="container">
+
+
+                    <div class="row d-flex gameinfo-data justify-content-center">
+                        <div class="col-4 col-lg-2 d-flex d-column align-items-center">
+                            <img src="images/city.svg" alt="Един град" title="Един град" /><h4>град</h4>
+                        </div>
+                        <div class="col-4 col-lg-2 d-flex d-column align-items-center">
+                            <img src="images/hours.svg" alt="Три часа" title="Три часа" /><h4>часа</h4>
+                        </div>
+                        <div class="col-4 col-lg-2 d-flex d-column align-items-center">
+                            <img src="images/bombs.svg" alt="8 скрити адски машини" title="8 адски машини" style="max-width:120px; margin-top:-5px;" /><h4>адски машини</h4>
+                        </div>
+                        <div class="col-md-8"><h2 class="pt-2 uppercase text-center">Можеш ли да ги спреш?</h2><p class="text-center">Неизвестен злосторник е скрил 8 адски машини в града. Единственият начин да ги спреш, е като решиш 8 загадки свързани с тях.</p></div>
+                    </div>
+                    <form action="payment.html" method="post" class="needs-validation" id="cityform">
+                        <div class="row d-flex justify-content-center">
+
+                            <div class="col-md-10 d-flex cities">
+                                <h3 class="text-center pb-3">Избери град:</h3>
+
+
+                                <div class="form-group citycheck pb-4 d-flex flex-row justify-content-between">
+
+                                    <div class="custom-control custom-radio ">
+                                        <input type="radio" class="custom-control-input" id="Sofia" name="city" value="sofia-payment" required>
+                                        <label class="custom-control-label" for="Sofia">София</label>
+                                    </div>
+                                    <div class="custom-control custom-radio ">
+                                        <input type="radio" class="custom-control-input " id="Plovdiv" name="city" value="plovdiv-payment" required>
+                                        <label class="custom-control-label inactive" for="Plovdiv" data-toggle="tooltip" data-placement="top" title="Очаквай скоро">Пловдив</label>
+                                    </div>
+                                    <div class="custom-control custom-radio ">
+                                        <input type="radio" class="custom-control-input" id="Varna" name="city" value="varna-payment" required>
+                                        <label class="custom-control-label  inactive" for="Varna" data-toggle="tooltip" data-placement="top" title="Очаквай скоро">Варна</label>
+                                    </div>
+                                    <div class="custom-control custom-radio ">
+                                        <input type="radio" class="custom-control-input" id="Burgas" name="city" value="burgas-payment" required>
+                                        <label class="custom-control-label  inactive" for="Burgas" data-toggle="tooltip" data-placement="top" title="Очаквай скоро">Бургас</label>
+
+
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+                            <div class="col-md-4  d-flex justify-content-center formbutton">
+                                <label class="error" generated="true" for="city" style="display:none;"></label>
+                                <button id="citysubmit" type="submit" class="btn w-100 mb-4 btn-primary">започни сега</button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+
+
+           
+        </header>
+
+  
+        <main>
+            <div id="path-wrap" style="border:solid 1px red"><?xml version="1.0" encoding="utf-8"?>
+                <svg id="full-route" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 473 7560.2" style="enable-background:new 0 0 473 7560.2;" xml:space="preserve">
+<style type="text/css">
+    .st0 {
+        fill: none;
+        stroke: #000000;
+        stroke-miterlimit: 10;
+    }
+
+    .st1 {
+        fill: url(#SVGID_1_);
+    }
+
+    .st2 {
+        fill: #2B2525;
+    }
+
+    .st3 {
+        fill: url(#SVGID_2_);
+    }
+
+    .st4 {
+        fill: url(#SVGID_3_);
+    }
+
+    .st5 {
+        fill: url(#SVGID_4_);
+    }
+
+    .st6 {
+        fill: url(#SVGID_5_);
+    }
+
+    .st7 {
+        fill: url(#SVGID_6_);
+    }
+
+    .st8 {
+        fill: url(#SVGID_7_);
+    }
+
+    .st9 {
+        fill: url(#SVGID_8_);
+    }
+
+    .st10 {
+        fill: url(#SVGID_9_);
+    }
+
+    .st11 {
+        fill: url(#SVGID_10_);
+    }
+
+    .st12 {
+        fill: url(#SVGID_11_);
+    }
+
+    .st13 {
+        fill: url(#SVGID_12_);
+    }
+</style>
+                <polyline id="boomraid-route" class="st0" points="131.2,13.2 131.2,111.8 147.2,615.7 122.2,1004.7 79.2,1075.7 116.2,1291.7 122.5,1671.4 33.2,1853.7
+	52.6,2075.6 125.2,2161.7 144.3,3025.2 198.2,3148.7 116.2,3767.7 117.3,4030.8 74.2,4319.7 107.2,4882.7 104.2,5342.7
+	131.2,5403.7 131.2,5889.4 59.2,6094.7 95.3,6829.1 150.2,7044.7 131.2,7560.7 " />
+
+                <polyline id="boomraid-route-shadow" class="st0" points="131.2,13.2 131.2,111.8 147.2,615.7 122.2,1004.7 79.2,1075.7 116.2,1291.7 122.5,1671.4 33.2,1853.7
+	52.6,2075.6 125.2,2161.7 144.3,3025.2 198.2,3148.7 116.2,3767.7 117.3,4030.8 74.2,4319.7 107.2,4882.7 104.2,5342.7
+	131.2,5403.7 131.2,5889.4 59.2,6094.7 95.3,6829.1 150.2,7044.7 131.2,7560.7 " />
+
+
+
+<g data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="59.7281" y1="6112.1582" x2="59.7281" y2="6076.1582">
+                <stop offset="0" style="stop-color:#EE2E23" />
+
+
+
+                <stop offset="1" style="stop-color:#F5861E" />
+
+
+
+	</linearGradient>
+                <circle class="st1" cx="59.7" cy="6094.2" r="18"/>
+
+
+
+                <circle class="st2" cx="59.7" cy="6094.2" r="11" />
+
+
+
+</g>
+<g data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="77.7281" y1="1094.1581" x2="77.7281" y2="1058.1581">
+                <stop offset="0" style="stop-color:#EE2E23" />
+
+
+
+                <stop offset="1" style="stop-color:#F5861E" />
+
+
+
+	</linearGradient>
+                <circle class="st3" cx="77.7" cy="1076.2" r="18" />
+
+
+
+                <circle class="st2" cx="77.7" cy="1076.2" r="11" />
+
+
+
+</g>
+<g data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="130.7281" y1="24.1581" x2="130.7281" y2="0.1581">
+                <stop offset="0" style="stop-color:#EE2E23" />
+
+
+
+                <stop offset="1" style="stop-color:#F5861E" />
+
+
+
+	</linearGradient>
+                <circle class="st4" cx="130.7" cy="20.2" r="18" />
+
+
+
+                <circle class="st2" cx="130.7" cy="20.2" r="11" />
+
+
+
+</g>
+<g data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="30.7281" y1="1870.1581" x2="30.7281" y2="1834.1581">
+                <stop offset="0" style="stop-color:#EE2E23" />
+
+
+
+                <stop offset="1" style="stop-color:#F5861E" />
+
+
+
+	</linearGradient>
+                <circle class="st5" cx="30.7" cy="1852.2" r="18" />
+
+
+
+                <circle class="st2" cx="30.7" cy="1852.2" r="11" />
+
+
+
+</g>
+<g data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="124.7281" y1="2279.1582" x2="124.7281" y2="2243.1582">
+                <stop offset="0" style="stop-color:#EE2E23" />
+
+
+
+                <stop offset="1" style="stop-color:#F5861E" />
+
+
+
+	</linearGradient>
+                <circle class="st6" cx="124.7" cy="2261.2" r="18" />
+
+
+
+                <circle class="st2" cx="124.7" cy="2261.2" r="11" />
+
+
+
+</g>
+<g data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="197.7281" y1="3167.1582" x2="197.7281" y2="3131.1582">
+                <stop offset="0" style="stop-color:#EE2E23" />
+
+
+
+                <stop offset="1" style="stop-color:#F5861E" />
+
+
+
+	</linearGradient>
+                <circle class="st7" cx="197.7" cy="3149.2" r="18" />
+
+
+
+                <circle class="st2" cx="197.7" cy="3149.2" r="11" />
+
+
+
+</g>
+<g  data-aos="fade">
+                <linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="115.7281" y1="3774.1582" x2="115.7281" y2="3738.1582">
+                <stop offset="0" style="stop-color:#EE2E23" />
+
+
+
+                <stop offset="1" style="stop-color:#F5861E" />
+
+
+
+	</linearGradient>
+                <circle class="st8" cx="115.7" cy="3756.2" r="18" />
+
+
+
+                <circle class="st2" cx="115.7" cy="3756.2" r="11" />
+
+
+
+</g>
+<g data-aos="fade">
+    <linearGradient id="SVGID_8_" gradientUnits="userSpaceOnUse" x1="72.7281" y1="4340.1582" x2="72.7281" y2="4304.1582">
+        <stop offset="0" style="stop-color:#EE2E23" />
+
+
+
+        <stop offset="1" style="stop-color:#F5861E" />
+
+
+
+    </linearGradient>
+    <circle class="st9" cx="72.7" cy="4322.2" r="18" />
+
+
+
+    <circle class="st2" cx="72.7" cy="4322.2" r="11" />
+
+
+
+</g>
+<g data-aos="fade">
+    <linearGradient id="SVGID_9_" gradientUnits="userSpaceOnUse" x1="106.7281" y1="4900.1582" x2="106.7281" y2="4864.1582">
+        <stop offset="0" style="stop-color:#EE2E23" />
+
+
+
+        <stop offset="1" style="stop-color:#F5861E" />
+
+
+
+    </linearGradient>
+    <circle class="st10" cx="106.7" cy="4882.2" r="18" />
+
+
+
+    <circle class="st2" cx="106.7" cy="4882.2" r="11" />
+
+
+
+</g>
+<g data-aos="fade">
+    <linearGradient id="SVGID_10_" gradientUnits="userSpaceOnUse" x1="130.7281" y1="5421.1582" x2="130.7281" y2="5385.1582">
+        <stop offset="0" style="stop-color:#EE2E23" />
+
+
+
+        <stop offset="1" style="stop-color:#F5861E" />
+
+
+
+    </linearGradient>
+    <circle class="st11" cx="130.7" cy="5403.2" r="18" />
+
+
+
+    <circle class="st2" cx="130.7" cy="5403.2" r="11" />
+
+
+
+</g>
+<g data-aos="fade">
+    <linearGradient id="SVGID_11_" gradientUnits="userSpaceOnUse" x1="149.7281" y1="7062.1582" x2="149.7281" y2="7026.1582">
+        <stop offset="0" style="stop-color:#EE2E23" />
+
+
+
+        <stop offset="1" style="stop-color:#F5861E" />
+
+
+
+    </linearGradient>
+    <circle class="st12" cx="149.7" cy="7044.2" r="18" />
+
+
+
+    <circle class="st2" cx="149.7" cy="7044.2" r="11" />
+
+
+
+</g>
+<g data-aos="fade">
+    <linearGradient id="SVGID_12_" gradientUnits="userSpaceOnUse" x1="130.7281" y1="7560.1582" x2="130.7281" y2="7524.1582">
+        <stop offset="0" style="stop-color:#EE2E23" />
+
+
+
+        <stop offset="1" style="stop-color:#F5861E" />
+
+
+
+    </linearGradient>
+    <circle class="st13" cx="130.7" cy="7542.2" r="18" />
+
+
+
+    <circle class="st2" cx="130.7" cy="7542.2" r="11" />
+
+
+
+</g>
+<path class="st0" d="M121.5,1608.5" />
+
+
+
+</svg>
+
+
+            </div>
+            <section id="whatis">
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <h2 class="pt-4 pb-4">Какво е BoomRaid</h2>
+                            <div class="text">BoomRaid е градска приключенска игра. Тя предизвиква участниците да решават загадки, да са наблюдателни и да се ориентират бързо в града. Те имат на разположение 3 часа за да решат колкото може повече загадки използвайки най-малко помощ.</div>
+                            <div class="help d-flex justify-content-between pt-4 pb-4">
+                                <div class="joker"><img src="images/help_friend.svg" alt="помощ от приятел" /><span class="success"></span></div>
+                                <div class="joker"><img src="images/help_browser.svg" alt="браузване в интернет" /><span class="success"></span></div>
+                                <div class="joker"><img src="images/help_map.svg" alt="ползване на карта" /><span class="success"></span></div>
+                                <div class="joker"><img src="images/help_stranger.svg" alt="помощ от минувачи" /><span class="success"></span></div>
+                            </div>
+                            <div class="text">
+                                <p>
+                                    В играта няма изкуствени забрани, всеки участник е свободен да използва каквото намери за добре за да обезвреди адските машини - обаждане на приятел, ползване на интернет, съвети с хора от улицата.
+                                </p>
+                                <p>  Ако все пак срещнете трудности може да поискате помощ за три от загадките и в краен случай да пропуснете една от тях.</p>
+                                <h3>Затова наричаме BoomRaid истинско приключение.</h3>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 screenshot" data-aos="fade-left" data-aos-anchor-placement="top-center"><img src="images/screenshot1.png" alt="BoomRaid"</div>
+                    </div>
+                </div>
+            </section>
+            <section id="whoweare">
+
+                <div class="container">
+                    <div class="row w-100">
+
+                        <div class="col-md-6 screenshot"><img src="images/screenshot2.png" alt="BoomRaid" data-aos="fade-right" data-aos-anchor-placement="top-center" /></div>
+                        <div class="col-md-6"><h2 class="pb-4">Кои сме ние</h2><div class="text">Ние сме специалисти в градските игри със загадки с над 13 годишен опит. Всичко започна 2004 година когато участвахме в Лов на Съкровища в Сан Франциско. След това пренесохме опита си в България и дълго време предлагахме приключенията само за фирми и организации. Време е за следващата стъпка - да направим вълнуващите градски преживявания достъпни за всички.</div></div>
+                    </div>
+                </div>
+
+            </section>
+            <section id="comparison">
+                <div class="container">
+                    <div class="row w-100">
+
+                        <div class="col-md-8 d-flex d-column justify-content-center">
+                            <div class="definitions">
+                                <div class="escaperoom"><h4>Ескейп стая</h4></div>
+                                <div class="th"></div>
+                                <div class="boomraid"><h4>BoomRaid<sup>TM</sup></h4></div>
+
+                            </div>
+
+                            <div class="definitions" data-aos="fade-right" data-aos-anchor-placement="top-center">
+                                <div class="escaperoom"><div class="text">1-1.5ч.</div></div>
+                                <div class="th">времетраене</div>
+                                <div class="boomraid"><div class="text">3ч.</div></div>
+                            </div>
+
+                            <div class="definitions" data-aos="fade-left" data-aos-anchor-placement="top-center">
+                                <div class="escaperoom"><div class="text">Закрито помещение</div></div>
+                                <div class="th">място</div>
+                                <div class="boomraid"><div class="text">Открито, в града</div></div>
+                            </div>
+
+                            <div class="definitions" data-aos="fade-right" data-aos-anchor-placement="top-center">
+                                <div class="escaperoom"><div class="text">Физически, логически</div></div>
+                                <div class="th">загадки</div>
+                                <div class="boomraid"><div class="text">Логически, наблюдателност</div></div>
+                            </div>
+
+                            <div class="definitions" data-aos="fade-left" data-aos-anchor-placement="top-center">
+                                <div class="escaperoom"><div class="text">Ограничен</div></div>
+                                <div class="th">брой участници</div>
+                                <div class="boomraid"><div class="text">Неограничен</div></div>
+                            </div>
+
+                            <div class="definitions" data-aos="fade-right" data-aos-anchor-placement="top-center">
+                                <div class="escaperoom"><div class="text">Да</div></div>
+                                <div class="th">предварително записване</div>
+                                <div class="boomraid"><div class="text">Не</div></div>
+                            </div>
+
+                            <div class="definitions" data-aos="fade-left" data-aos-anchor-placement="top-center">
+                                <div class="escaperoom"><div class="text">В определен час</div></div>
+                                <div class="th">старт на играта</div>
+                                <div class="boomraid"><div class="text">По всяко време</div></div>
+                            </div>
+
+                            <div class="definitions" data-aos="fade-left" data-aos-anchor-placement="top-center">
+                                <div class="escaperoom"><div class="text">Минимално</div></div>
+                                <div class="th">физическо усилие</div>
+                                <div class="boomraid"><div class="text">Ходене, 5км</div></div>
+                            </div>
+
+                            <div class="definitions" data-aos="fade-right" data-aos-anchor-placement="top-center">
+                                <div class="escaperoom"><div class="text">На участник</div></div>
+                                <div class="th">цена</div>
+                                <div class="boomraid"><div class="text">На игра</div></div>
+                            </div>
+
+
+
+                        </div>
+                        <div class="col-md-4 screenshot"><img src="images/screenshot3.png" alt="BoomRaid" data-aos="fade-left" data-aos-anchor-placement="top-center" /></div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="howtoplay">
+                <div class="container">
+                    <div class="row w-100 justify-content-center">
+                        <div class="col-md-12">
+                            <h2 class="text-center pb-4">Как се играе</h2>
+
+
+                            <div id="howtoplaycarousel" class="carousel slide у-100 d-flex justify-content-center" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <h4><span class="accent">1.</span>Избираш град</h4>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h4><span class="accent">2.</span>Купуваш код за играта</h4>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h4><span class="accent">3.</span>Събираш екип или група приятели</h4>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <h4><span class="accent">4.</span>Стартираш, когато пожелаеш!</h4>
+                                    </div>
+
+                                    
+
+                                </div>
+
+                                <div class="carouselcontrols col-md-4">
+                                    <a class="carousel-control-prev" href="#howtoplaycarousel" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-chevron-left"></i></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#howtoplaycarousel" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-chevron-right"></i></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12  d-flex justify-content-center align-items-center d-column">
+
+                            <h5 class="text-center pt-4 pb-4">ИГРАТА Е ПОДХОДЯЩА ЗА</h5>
+                            <div class="suitableideas">
+                                <div class="suitable d-column justify-content-center mr-1">
+                                    <div class="imageholder"><img src="images/teambuilding.svg" /></div>
+                                    Тиймбилдинг
+                                </div>
+
+                                <div class="suitable d-column mr-3">
+                                    <div class="imageholder"><img src="images/gift.svg" /></div>
+                                    Подарък
+                                </div>
+
+
+                                <div class="suitable d-column mr-3">
+                                    <div class="imageholder"><img src="images/family.svg" /></div>
+                                    Семейства
+                                </div>
+
+                                <div class="suitable d-column mr-3">
+                                    <div class="imageholder"><img src="images/friends.svg" /></div>
+                                    Приятели
+                                </div>
+
+                                <div class="suitable d-column">
+                                    <div class="imageholder"><img src="images/bored.svg" /></div>
+                                    Скучаещи
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <section id="testimonials">
+                <div class="container">
+                    <h2 class="pt-4 text-center pb-4">Споделени впечатления</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+
+                            <div id="testimonialcarousel" class="carousel slide у-100 d-flex justify-content-center vert" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="testimonial" data-aos="fade-right" data-aos-anchor-placement="top-center">
+                                            <div class="herobox">
+                                                <div class="text p-2">Не мога да повярвам колко тръпка може да донесе подобно приключение в центъра на София!</div>
+
+                                            </div>
+                                        </div>
+                                        <div class="testimonial" data-aos="fade-left" data-aos-anchor-placement="top-center">
+                                            <div class="herobox">
+                                                <div class="text p-2">Не мога да повярвам колко тръпка може да донесе подобно приключение в центъра на София!</div>
+
+                                            </div>
+                                        </div>
+                                        <div class="testimonial" data-aos="fade-right" data-aos-anchor-placement="top-center">
+                                            <div class="herobox">
+                                                <div class="text p-2">Не мога да повярвам колко тръпка може да донесе подобно приключение в центъра на София!</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="carouselcontrols col-md-4">
+                                    <a class="carousel-control-prev" href="#testimonialcarousel" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-chevron-left"></i></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#testimonialcarousel" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-chevron-right"></i></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <section id="example">
+                <div class="container"><div class="row justify-content-center"><div class="col-md-6"><div class="screenshot"><img src="images/screenshot4.png" /></div></div></div></div>
+                <div class="progress w-100 d-flex justify-content-center" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <div class="single-chart">
+                        <svg viewBox="0 0 36 36" class="circular-chart pri-one">
+                            <path class="circle-bg" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                            <path class="circle" stroke-dasharray="99, 100" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                            <text x="18" y="20.35" class="percentage"><tspan class="statistic">99</tspan>%</text>
+                        </svg>
+
+                        <span>Участници харесали играта</span>
+                    </div>
+                    <div class="single-chart">
+                        <svg viewBox="0 0 36 36" class="circular-chart pri-one">
+                            <path class="circle-bg" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                            <path class="circle" stroke-dasharray="98, 100" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                            <text x="18" y="20.35" class="percentage"><tspan class="statistic">98</tspan>%</text>
+                        </svg>
+
+                        <span>Участници, които биха играли пак</span>
+                    </div>
+                    <div class="single-chart">
+                        <svg viewBox="0 0 36 36" class="circular-chart pri-one">
+                            <path class="circle-bg" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                            <path class="circle" stroke-dasharray="99, 100" d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                            <text x="18" y="20.35" class="percentage"><tspan class="statistic">99.9</tspan>%</text>
+                        </svg>
+
+                        <span>Участници  препоръчали играта</span>
+                    </div>
+                </div>
+
+
+            </section>
+
+            <section id="adventure">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <h2 class="text-center mt-4 mb-4">Впусни се в градското приключение!</h2>
+                            <div class="text">
+
+                                <ul>
+                                    <li>
+                                        Няма ограничение на броя участници в един отбор.
+                                    </li>
+
+                                    <li>
+                                        Може да се играе по всяко време без да се запазва час.
+                                    </li>
+
+                                    <li>
+                                        Участниците могат да използват каквито ресурси сметнат за необходимо за да решат загадките.
+                                    </li>
+                                </ul>
+
+
+                                <form action="payment.html" method="post" class="needs-validation" id="cityform2">
+                                    <div class="row d-flex justify-content-center">
+
+                                        <div class="col-md-10 d-flex cities">
+                                            <h3 class="text-center pb-3">Избери град:</h3>
+
+
+                                            <div class="form-group citycheck pb-4 d-flex flex-row justify-content-between">
+
+                                                <div class="custom-control custom-radio ">
+                                                    <input type="radio" class="custom-control-input" id="Sofia2" name="city2" value="sofia-payment" required>
+                                                    <label class="custom-control-label" for="Sofia2">София</label>
+                                                </div>
+                                                <div class="custom-control custom-radio ">
+                                                    <input type="radio" class="custom-control-input" id="Plovdiv2" name="city2" value="plovdiv-payment" required>
+                                                    <label class="custom-control-label inactive" for="Plovdiv2" data-toggle="tooltip" data-placement="top" title="Очаквай скоро">Пловдив</label>
+                                                </div>
+                                                <div class="custom-control custom-radio ">
+                                                    <input type="radio" class="custom-control-input" id="Varna2" name="city2" value="varna-payment" required>
+                                                    <label class="custom-control-label inactive" for="Varna2" data-toggle="tooltip" data-placement="top" title="Очаквай скоро">Варна</label>
+                                                </div>
+                                                <div class="custom-control custom-radio ">
+                                                    <input type="radio" class="custom-control-input" id="Burgas2" name="city2" value="burgas-payment" required>
+                                                    <label class="custom-control-label inactive" for="Burgas2" data-toggle="tooltip" data-placement="top" title="Очаквай скоро">Варна</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4  d-flex justify-content-center"><button id="citysubmit" type="submit" class="btn w-100 btn-primary waves-effect waves-light">започни сега</button></div>
+                                        
+                                        </div></section>
+            </main>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row d-flex justify-content-between">
+                <div class="col-md-4">
+                    <h4 class="pt-6">Кога ще излезе нещо ново...</h4><div class="textwidget custom-html-widget">
+                        <div class="hs-newsletter">
+                            
+                           
+                            <div class="hbspt-form">
+                                <form novalidate="" accept-charset="UTF-8" action="" method="POST" class="hs-form">
+                                    <div class="inputholder md-form">
+                                        <input type="email" class="form-control" id="youremail" value="" autocomplete="email">
+                                        <label for="youremail">Въведи имейл адрес</label>
+                                        <input type="submit" value="Изпрати" class="hs-button btn-primary">
+                                    </div>
+
+                            </div></form>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="footer-menus" class="col-md-8 pt-6 d-flex justify-content-end">
+                    <div class="col-md-4">
+
+                        <h4 class="widget-title">За BoomRaid<sup>TM</sup></h4>
+                        <ul>
+                            <li><a href="faq.html">Често задавани въпроси</a></li>
+                            <li><a href="instructions.html">Правила на играта</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <h4 class="widget-title">За нас</h4>
+                        <ul>
+                            <li><a href="about.html">Кои сме ние</a></li>
+                            <li><a href="contact.html">Контакти</a></li>
+                            <li><a href="https://www.facebook.com/BoomRaidBG"><i class="fab fa-facebook"></i></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="footer-bottom  pt-3 pb-3">
+            <div class="container d-flex justify-content-between">
+                <div class="copyright">
+
+                    © 2020 Boomraid All rights reserved.
+
+                </div>
+                <div class="terms">
+                    <a href="policy.html">Политика за лични данни</a> |
+                    <a href="terms.html">Условия за ползване</a>
+
+                </div>
+            </div>
+        </div>
+        </div>
+
+        </div>
+        <!-- .site-info -->
+    </footer>
+
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.8.5/countUp.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.0.16/svg.js"></script>
+   
+
+
+    <script>
+        $(document).ready(function () {
+
+            $('label[data-toggle="tooltip"]').tooltip({
+                animated: 'fade',
+                placement: 'bottom',
+                trigger: 'click'
+            });
+
+
+            $('label[data-toggle="tooltip"]').on('click', function (evt) {
+
+                var elem,
+                    delay;
+
+                delay = 1000; // 5 seconds
+
+                evt.preventDefault();
+                evt.stopImmediatePropagation();
+
+                elem = evt.currentTarget;
+
+                if ($(elem).data('popoverisvisible') == 1) {
+                    $(elem).tooltip('hide');
+                    $(elem).data('popoverisvisible', 0);
+                }
+                else {
+                    $(elem).tooltip('show');
+                    $(elem).data('popoverisvisible', 1);
+                    setTimeout(function () {
+                        if ($(elem).data('popoverisvisible') == 1) {
+                            $(elem).tooltip('hide');
+                            $(elem).data('popoverisvisible', 0);
+                        }
+                    }, delay);
+                }
+            });
+
+
+
+
+           
+            // Find all Statistics on page, put them inside a variable
+            var statistics = $(".statistic");
+
+            // For each Statistic we find, animate it
+            statistics.each(function (index) {
+                // Find the value we want to animate (what lives inside the p tags)
+                var value = $(statistics[index]).html();
+                // Start animating
+                var statisticAnimation = new CountUp(statistics[index], 0, value, 0, 5);
+                statisticAnimation.start();
+            });
+
+            $('#cityform').submit(function () {
+
+            });
+            var thecarousel = $(".carousel");
+            thecarousel.each(function (index) {
+
+                thecarousel.carousel();
+
+
+            });
+        });
+
+
+        (function ($, W, D) {
+            var JQUERY4U = {};
+
+            JQUERY4U.UTIL = {
+                setupFormValidation: function () {
+                    //form validation rules
+                    $("#cityform").validate({
+
+                        onfocusout: function (element) {
+                            $(element).valid();
+                        },
+
+                        rules: {
+                            city: {
+                                required: true
+                            },
+
+
+                        },
+                        messages: {
+
+                            city: "Изберете град",
+                        },
+                        errorPlacement: function (error, element) {
+                            if (element.is(":radio") || element.is(":checkbox")) {
+                                error.insertAfter(element.parent()).animate({ opacity: 0.25, left: '+=50' });
+                            } else {
+                                error.insertAfter(element).animate({ opacity: 0.25, left: '+=50' });
+                            }
+                        },
+                        submitHandler: function (form) {
+                            window.location = '/' + $('input[name="city"]:checked').val() + '.html';
+                            return false;  // Prevent the default form behaviour
+                        }
+                    });
+
+                    $("#cityform2").validate({
+
+                        onfocusout: function (element) {
+                            $(element).valid();
+                        },
+
+                        rules: {
+                            city: {
+                                required: true
+                            },
+
+
+                        },
+                        messages: {
+
+                            city: "Изберете град",
+                        },
+                        errorPlacement: function (error, element) {
+                            if (element.is(":radio") || element.is(":checkbox")) {
+                                error.insertAfter(element).animate({ opacity: 0.25, bottom: '+=50' });
+                            } else {
+                             //   error.insertAfter(element).animate({ opacity: 0.25, left: '+=50' });
+                            }
+                        },
+                        submitHandler: function (form) {
+                            //window.location = '/' + $('input[name="city2"]:checked').val() + '.html';
+                            window.location = '/' + $('input[name = "city2"]: checked').val() + '.html';
+                            return false;  // Prevent the default form behaviour
+                        }
+                    });
+                }
+            }
+            $(D).ready(function ($) {
+                JQUERY4U.UTIL.setupFormValidation();
+            });
+
+
+
+        })(jQuery, window, document);
+        AOS.init();
+
+
+       
+        var path = document.querySelector('#boomraid-route');
+
+       
+            var pathLength = path.getTotalLength();
+
+            path.style.strokeDasharray = pathLength + ' ' + pathLength;
+
+            path.style.strokeDashoffset = pathLength;
+
+            path.getBoundingClientRect();
+       
+
+        window.addEventListener("scroll", function (e) {
+
+            var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+          
+
+                
+                var pathLength = path.getTotalLength();
+                var drawLength = pathLength * scrollPercentage;
+                path.style.strokeDashoffset = pathLength - drawLength;
+
+                if (scrollPercentage >= 0.99) {
+                    path.style.strokeDasharray = "none";
+
+                } else {
+                    path.style.strokeDasharray = pathLength + ' ' + pathLength;
+                }
+
+            if (scrollPercentage >= 0.45) {
+                path.style.strokeDashoffset = pathLength - (drawLength + document.body.scrollTop + 300);
+
+            }
+
+            else {
+                path.style.strokeDashoffset = pathLength - (drawLength + document.body.scrollTop - 300);
+
+            }
+                //debug
+               
+            console.log('window height: ' + $(window).height())
+
+            console.log('percentage ' + document.documentElement.clientHeight)
+                    console.log('drawLength ' + drawLength)
+                    console.log('path.style.strokeDashoffset ' + path.style.strokeDashoffset)
+                    console.log('path.style.strokeDasharray ' + path.style.strokeDasharray)
+                    console.log(' ')
+               
+
+          
+
+        });
+
+
+
+
+      
+    </script>
+
+</body>
+</html>
