@@ -510,6 +510,10 @@ button {
 .mx-n1 {
   margin-left: -0.25rem !important;
 }
+html,
+body {
+  overflow-x: hidden;
+}
 body {
   font-family: "Rubik", "Segoe UI", "Helvetica Neue";
   overflow-x: hidden;
