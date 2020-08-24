@@ -1533,6 +1533,7 @@ main {
   font-weight: 500;
   font-size: 16px;
   text-transform: none;
+  width: 90%;
 }
 .card-body {
   color: #120e26;
